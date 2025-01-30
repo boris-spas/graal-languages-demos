@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 public class ExtListDir {
     public static void main(String[] args) throws java.io.IOException {
-        try (Context context = Context.newBuilder().allowAllAccess(true).build()) {
+        try (Context context = Context.newBuilder().build()) {
             Arguments arguments = arguments(args);
             System.out.println(arguments.script);
             final Value lambda = context.eval(arguments.lang, arguments.script);
